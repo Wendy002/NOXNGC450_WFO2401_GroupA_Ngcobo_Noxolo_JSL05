@@ -10,9 +10,16 @@ const songs = [
     { title: "Ain't No Mountain High Enough", artist: "Marvin Gaye & Tammi Terrell", genre: "R&B" },
     { title: "Come and Get Your Love", artist: "Redbone", genre: "Rock" },
     { title: "I'm Not in Love", artist: "10cc", genre: "Pop" },
-    { title: "Fooled Around and Fell in Love", artist: "Elvin Bishop", genre: "Rock" },
-    // Feel free to add even more songs
+    { title: "So Amazing", artist: "Luther Vandross", genre: "R&B" },          // Feel free to add even more songs
+    { title: "ART", artist: "Tyla", genre: "R&B" },
+    { title: "Me & U", artist: "Tems", genre: "R&B" },
+    { title: "Jump", artist: "Tyla", genre: "R&B" },
+    { title: "Abalele", artist: "Kabza da small,Dj Maphorisa ft Ami Faku ", genre: "Amapiano" },
+    { title: "Yes God", artist: "Oscar Mbo ft Murda ", genre: "Deep House" }
+   
+
 ];
+
 
 
 // Object containing each Guardian's preferred genre

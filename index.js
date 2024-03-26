@@ -15,7 +15,7 @@ const songs = [
     { title: "Me & U", artist: "Tems", genre: "R&B" },
     { title: "Jump", artist: "Tyla", genre: "R&B" },
     { title: "Abalele", artist: "Kabza da small,Dj Maphorisa ft Ami Faku ", genre: "Amapiano" },
-    { title: "Yes God", artist: "Oscar Mbo ft Murda ", genre: "Deep House" }
+    { title: "Yes God", artist: "Oscar Mbo ft Murda ", genre: "Amapiano" }
    
 
 ];
@@ -27,12 +27,19 @@ const guardians = {
     "Star-Lord": "Rock",
     "Gamora": "Pop",
     // Add preferences for Drax, Rocket, and Groot
+    "Drax":"R&B",
+    "Rocket":"Amapiano",
+    "Groot": "Rock"
 };
 
 // Function to generate playlist based on preferred genre
 function generatePlaylist(guardians, songs) {
     // Use the map() function to create playlists for each Guardian
     // Your code here
+    songs.map(song => {console.log(`${song.title} by ${song.artist}`
+
+    )});
+
 }
 
 // Call generatePlaylist and display the playlists for each Guardian

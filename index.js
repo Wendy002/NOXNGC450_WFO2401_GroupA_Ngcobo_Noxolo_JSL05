@@ -32,15 +32,25 @@ const guardians = {
     "Groot": "Rock"
 };
 
+//
+const starLord = document.getElementById('star-playlist');
+
 // Function to generate playlist based on preferred genre
 function generatePlaylist(guardians, songs) {
     // Use the map() function to create playlists for each Guardian
     // Your code here
     const playlist = Object.entries(guardians).map(([guardian,preferredGenre]) => {
         const preferredSongs =  songs.filter(song => song.genre === preferredGenre);
-        
+        return {guardianName: guardian , songList: preferredSongs}; // return object with name of gurdian and preferred songs
     });
-    console.log(playlist);
+    //first breakdown for each user
+    const userOneObject =  playlist[0].songList;
+    userOneObject.map(song => {
+        console.log(`${song.title} by ${song.artist}`);
+    });
+    
+
+
 
 }
 

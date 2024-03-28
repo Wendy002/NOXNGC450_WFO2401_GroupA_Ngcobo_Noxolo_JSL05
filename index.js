@@ -49,15 +49,22 @@ function generatePlaylist(guardians, songs) {
 
         let playListCard = document.createElement('div');
         playListCards.appendChild(playListCard);
-        playListCard.classList()
+        playListCard.classList.add('playlist');
         let guardianNameHeading = document.createElement('h2');
         guardianNameHeading.textContent = `${eachGuadianList.guardianName}'s Playlist`;
         playListCard.appendChild(guardianNameHeading);
 
         eachGuadianList.songList.map(song => { 
             let songPreferred = document.createElement('p');
-            songPreferred.textContent = `${song.title} by ${song.artist}`
+            const songLink = document.createElement('a');
+            songLink.classList.add('song');
+            songLink.classList.add('song-title');
+            songLink.href= "#";
+            songLink.textContent = `${song.title}`;
+            songPreferred.appendChild(songLink);
+            songPreferred.append(` by ${song.artist}`)
             playListCard.appendChild(songPreferred);
+            
     
         });
 

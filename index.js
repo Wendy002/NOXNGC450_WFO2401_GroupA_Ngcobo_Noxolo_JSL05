@@ -38,25 +38,26 @@ function generatePlaylist(guardians, songs) {
     // Use the map() function to create playlists for each Guardian
     // Your code here
   
-    const playListCards = document.getElementById('playlists');
-    const playlist = Object.entries(guardians).map(([guardian,preferredGenre]) => {
-        const preferredSongs =  songs.filter(song => song.genre === preferredGenre);
+    const playListCards = document.getElementById('playlists'); // get the div container for all playlists
+    const playlist = Object.entries(guardians).map(([guardian,preferredGenre]) => { //get name of guardian and genre
+        const preferredSongs =  songs.filter(song => song.genre === preferredGenre);  // get all songs with the genre that matches the genre of the guardian
         return {guardianName: guardian , songList: preferredSongs}; // return object with name of gurdian and preferred songs
     });
-    //first breakdown for each user
     
-    playlist.map(eachGuadianList => {
 
-        let playListCard = document.createElement('div');
+    
+    playlist.map(eachGuadianList => { // use the playlist object with preferred songs for each user
+
+        let playListCard = document.createElement('div');        //create container for each user playlist and append it to main container
         playListCards.appendChild(playListCard);
-        playListCard.classList.add('playlist');
-        let guardianNameHeading = document.createElement('h2');
+        playListCard.classList.add('playlist');   // add styling to the card playlist
+        let guardianNameHeading = document.createElement('h2');  
         guardianNameHeading.textContent = `${eachGuadianList.guardianName}'s Playlist`;
-        playListCard.appendChild(guardianNameHeading);
+        playListCard.appendChild(guardianNameHeading); // appends the heading h2 element
 
-        eachGuadianList.songList.map(song => { 
-            let songPreferred = document.createElement('p');
-            const songLink = document.createElement('a');
+        eachGuadianList.songList.map(song => {  // we then loop through the songs for each user using map()
+            let songPreferred = document.createElement('p'); //p tag element
+            const songLink = document.createElement('a'); // anchor tag for song titles
             songLink.classList.add('song');
             songLink.classList.add('song-title');
             songLink.href= "#";
